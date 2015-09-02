@@ -1,6 +1,5 @@
 package uk.ac.ebi.pwp.widgets.gxa.ui;
 
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.ui.Composite;
@@ -45,9 +44,9 @@ public class GXAViewer extends Composite {
             this.container.clear();
             String placeHolder = this.container.getElement().getId();
             if(this.uniprotID!=null){
-                this.gxa = AtlasHeatmapModule.build(GWT.getHostPageBaseURL(), placeHolder, URL.encode(uniprotID));
+                this.gxa = AtlasHeatmapModule.build(placeHolder, URL.encode(uniprotID));
             }else if(this.reactomeID!=null){
-                this.gxa = AtlasHeatmapModule.build(GWT.getHostPageBaseURL(), placeHolder, URL.encode(reactomeID));
+                this.gxa = AtlasHeatmapModule.build(placeHolder, URL.encode(reactomeID));
             }else {
                 this.setEmpty();
             }

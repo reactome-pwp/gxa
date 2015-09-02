@@ -10,7 +10,7 @@ class AtlasHeatmapModule extends JavaScriptObject {
     protected AtlasHeatmapModule() {
     }
 
-    public static native AtlasHeatmapModule build(String baseUrl, String placeHolder, String uniprotID) /*-{
+    public static native AtlasHeatmapModule build(String placeHolder, String uniprotID) /*-{
         var AtlasHeatmapBuilder = $wnd.window.exposed;
         AtlasHeatmapBuilder({
             gxaBaseUrl  : 'http://www.ebi.ac.uk/gxa/',
