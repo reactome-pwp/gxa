@@ -1,4 +1,4 @@
-# PDBe Widget
+# GXA Widget
 Shows a summary of the gene expression data available in Gene Expression Atlas (GXA)
 
 <img src="gxa-example.png " align="center" alt="pdb widget example">
