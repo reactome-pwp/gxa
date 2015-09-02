@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <!-- Default page to serve -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+
+    <!-- RESTFul WS PROXY Configuration -->
+    <!--<servlet>-->
+        <!--<servlet-name>GXAProxy</servlet-name>-->
+        <!--<servlet-class>uk.ac.ebi.pride.web.util.servlet.proxy.ProxyServlet</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>proxyHost</param-name>-->
+            <!--<param-value>www.ebi.ac.uk</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>proxyPort</param-name>-->
+            <!--<param-value>80</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>proxyPath</param-name>-->
+            <!--<param-value>/gxa</param-value>-->
+        <!--</init-param>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>GXAProxy</servlet-name>-->
+        <!--<url-pattern>/gxa/*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+</web-app>
