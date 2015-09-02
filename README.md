@@ -42,7 +42,7 @@ Then add the pdbe dependency
         <dependency>
             <groupId>uk.ac.ebi.pwp.widgets</groupId>
             <artifactId>gxa</artifactId>
-            <version>2.3.0</version>
+            <version>2.3.1</version>
         </dependency>
     <dependencies>
     
