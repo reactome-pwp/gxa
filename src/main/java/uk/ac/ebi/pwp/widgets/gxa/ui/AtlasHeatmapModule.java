@@ -7,16 +7,23 @@ import com.google.gwt.core.client.JavaScriptObject;
  */
 class AtlasHeatmapModule extends JavaScriptObject {
 
+    static {
+        init();
+    }
+
     protected AtlasHeatmapModule() {
     }
 
+    private static native void init() /*-{
+        AtlasHeatmapBuilder = $wnd.window.exposed;
+    }-*/;
+
     public static native AtlasHeatmapModule build(String placeHolder, String uniprotID) /*-{
-        var AtlasHeatmapBuilder = $wnd.window.exposed;
         AtlasHeatmapBuilder({
-            gxaBaseUrl  : 'http://www.ebi.ac.uk/gxa/',
-            params      : 'geneQuery=' + uniprotID,
+            gxaBaseUrl: 'http://www.ebi.ac.uk/gxa/',
+            params: 'geneQuery=' + uniprotID,
             isMultiExperiment: false,
-            target      : placeHolder
+            target: placeHolder
         });
     }-*/;
 
