@@ -1,7 +1,7 @@
 # GXA Widget
 Shows a summary of the gene expression data available in Gene Expression Atlas (GXA)
 
-<img src="gxa-example.png " align="center" alt="pdb widget example">
+<img src="gxa-example.png " align="center" alt="GXA widget example">
 
 ## How to use the widget?
 
@@ -35,7 +35,7 @@ First add EBI Nexus repository in your pom.xml file
         </repository>
     </repositories>
 
-Then add the pdbe dependency
+Then add the GXA dependency
 
     <dependencies>
         ...
@@ -46,7 +46,7 @@ Then add the pdbe dependency
         </dependency>
     <dependencies>
     
-In your project main html file add the following pdbe javascript dependencies
+In your project main html file add the following GXA javascript dependencies
 
     <!--GXA dependencies-->
     <script language="JavaScript" type="text/javascript" src="http://www.ebi.ac.uk/gxa/resources/js-bundles/vendor.bundle.js"></script>
