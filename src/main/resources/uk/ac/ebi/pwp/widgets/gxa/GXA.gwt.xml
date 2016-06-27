@@ -3,44 +3,6 @@
     <!-- Inherit the core Web Toolkit stuff.                        -->
     <inherits name='com.google.gwt.user.User'/>
 
-    <stylesheet src="//www.ebi.ac.uk/gxa/resources/css/atlas.css"/>
-    <stylesheet src="//www.ebi.ac.uk/gxa/resources/css/table-grid.css"/>
-    <stylesheet src="//www.ebi.ac.uk/gxa/resources/css/heatmap-and-anatomogram.css"/>
-    <stylesheet src="//www.ebi.ac.uk/gxa/resources/js/lib/jquery-ui-1.11.4.custom/jquery-ui.min.css"/>
-
-    <!-- IMPORTANT! Please check the dependencies in the index.html file -->
-
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/react/react-0.11.1.min.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/jquery-1.9.1.min.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/jquery-migrate-1.2.0.min.js"/>-->
-
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/jquery-ui-1.11.4.custom/jquery-ui.min.js"/>-->
-
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/jsx/factorTooltip.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/factorTooltipModule.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/jsx/contrastTooltip.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/contrastTooltipModule.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/helpTooltipsModule.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/genePropertiesTooltipModule.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/highlight.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/anatomogramModule.js"/>-->
-
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/highcharts-4.1.5/js/highcharts.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/highcharts-4.1.5/js/highcharts-more.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/highcharts-4.1.5/js/modules/exporting.js"/>-->
-
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/jsx/cellBaselineVariance.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/jquery.svg.package-1.4.5/jquery.svg.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/js/lib/EventEmitter-4.2.7.js"/>-->
-
-    <!--<script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"/>-->
-
-    <!--<script src="//www.ebi.ac.uk/Tools/biojs/biojs/Biojs.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/biojs/AtlasHeatmapReact.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/jsx/heatmap.js"/>-->
-    <!--<script src="//www.ebi.ac.uk/gxa/resources/jsx/heatmapContainer.js"/>-->
-
-
     <source path="ui" />
 
 </module>
