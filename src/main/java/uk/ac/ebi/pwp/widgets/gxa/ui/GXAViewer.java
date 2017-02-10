@@ -6,6 +6,7 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.ScrollPanel;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -27,15 +28,17 @@ public class GXAViewer extends Composite {
         initWidget(this.container);
     }
 
-    private String getQueryString(List<String> uniProtIDs){
-        StringBuilder sb = new StringBuilder();
-        for (String uniProtID : uniProtIDs) {
+    private String getQueryString(List<String> ids){
+        StringBuilder sb = new StringBuilder("[");
+        for (String uniProtID : ids) {
+            sb.append("{\"value\":\"");
             sb.append(uniProtID);
-            sb.append("+");
+            sb.append("\"},");
         }
         if(sb.length()>0){
             sb.delete(sb.length()-1, sb.length());
         }
+        sb.append("]");
         return sb.toString();
     }
 
@@ -44,7 +47,7 @@ public class GXAViewer extends Composite {
             this.container.clear();
             String placeHolder = this.container.getElement().getId();
             if(this.uniprotID!=null){
-                this.gxa = AtlasHeatmapModule.build(placeHolder, URL.encode(uniprotID));
+                this.gxa = AtlasHeatmapModule.build(placeHolder, uniprotID);
             }else if(this.reactomeID!=null){
                 this.gxa = AtlasHeatmapModule.build(placeHolder, URL.encode(reactomeID));
             }else {
@@ -58,13 +61,14 @@ public class GXAViewer extends Composite {
         this.container.add(new HTMLPanel("No expression data available."));
     }
 
-    public void setUniProtID(String uniprotID) {
-        this.uniprotID = uniprotID;
+    public void setUniProtID(String uniProtID) {
+        this.uniprotID = this.getQueryString(Collections.singletonList(uniProtID));
         this.load();
     }
 
     public void setUniProtIDs(List<String> uniProtIDs){
-        this.setUniProtID(this.getQueryString(uniProtIDs));
+        this.uniprotID = this.getQueryString(uniProtIDs);
+        this.load();
     }
 
     public void setReactomeID(String reactomeID) {
