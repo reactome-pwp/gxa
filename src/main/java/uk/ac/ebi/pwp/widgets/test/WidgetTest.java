@@ -6,6 +6,8 @@ import com.google.gwt.core.client.RunAsyncCallback;
 import com.google.gwt.user.client.ui.RootPanel;
 import uk.ac.ebi.pwp.widgets.gxa.ui.GXAViewer;
 
+import java.util.Arrays;
+
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
@@ -23,8 +25,9 @@ public class WidgetTest implements EntryPoint {
             @SuppressWarnings("unchecked")
             public void onSuccess() {
                 GXAViewer gxaViewer = new GXAViewer();
-//                gxaViewer.setUniProtIDs(Arrays.asList("O43293","P53355", "Q8IZJ1"));
-                gxaViewer.setReactomeID("R-HSA-69580");
+                gxaViewer.setUniProtIDs(Arrays.asList("O43293","P53355","Q8IZJ1"));
+//                gxaViewer.setUniProtID("O43293");
+//                gxaViewer.setReactomeID("R-HSA-69580");
                 RootPanel.get(PLACE_HOLDER).add(gxaViewer);
             }
         });
