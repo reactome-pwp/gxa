@@ -1,12 +1,15 @@
+<img src=https://cloud.githubusercontent.com/assets/6883670/22938783/bbef4474-f2d4-11e6-92a5-07c1a6964491.png width=220 height=100 />
+
 # GXA Widget
 Shows a summary of the gene expression data available in Gene Expression Atlas (GXA)
 
-<img src="gxa-example.png " align="center" alt="GXA widget example">
+<img src="https://cloud.githubusercontent.com/assets/6883670/24966498/ff09995c-1f9e-11e7-8c18-bbafc1ead865.png" align="center" alt="GXA widget example">
 
 ## How to use the widget?
 
-First add EBI Nexus repository in your pom.xml file
+First add EBI Nexus repository in your ```pom.xml``` file
 
+```xml
     <repositories>
         ...
         <!-- EBI repo -->
@@ -34,9 +37,11 @@ First add EBI Nexus repository in your pom.xml file
             </snapshots>
         </repository>
     </repositories>
+```
 
 Then add the GXA dependency
 
+```xml
     <dependencies>
         ...
         <dependency>
@@ -45,14 +50,19 @@ Then add the GXA dependency
             <version>2.3.1</version>
         </dependency>
     <dependencies>
-    
+```
+
 In your project main html file add the following GXA javascript dependencies
 
+```javascript
     <!--GXA dependencies-->
     <script language="JavaScript" type="text/javascript" src="http://www.ebi.ac.uk/gxa/resources/js-bundles/vendor.bundle.js"></script>
     <script language="JavaScript" type="text/javascript" src="http://www.ebi.ac.uk/gxa/resources/js-bundles/expression-atlas-heatmap.bundle.js"></script>
-    
-The GXA panel can be created as follows and then placed in the right place-holder  
-  
+```
+
+The GXA panel can be created as follows and then placed in the right placeholder  
+
+```java
     GXAViewer gxaViewer = new GXAViewer();
     gxaViewer.setReactomeID("R-HSA-69580");
+```
