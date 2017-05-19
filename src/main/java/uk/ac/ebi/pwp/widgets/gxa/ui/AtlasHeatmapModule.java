@@ -12,7 +12,6 @@ class AtlasHeatmapModule extends JavaScriptObject {
 
     public static native AtlasHeatmapModule build(String placeHolder, String geneQuery) /*-{
         $wnd.expressionAtlasHeatmapHighcharts.render({
-            atlasUrl: "https://wwwdev.ebi.ac.uk/gxa/",
             query: {
                 gene: geneQuery
             },

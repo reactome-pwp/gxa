@@ -7,7 +7,7 @@
     <groupId>uk.ac.ebi.pwp.widgets</groupId>
     <artifactId>gxa</artifactId>
     <packaging>jar</packaging>
-    <version>3.0.2</version>
+    <version>3.0.3</version>
     <name>GXA Viewer</name>
 
     <properties>
