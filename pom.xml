@@ -7,12 +7,12 @@
     <groupId>uk.ac.ebi.pwp.widgets</groupId>
     <artifactId>gxa</artifactId>
     <packaging>jar</packaging>
-    <version>3.0.1</version>
+    <version>3.0.2</version>
     <name>GXA Viewer</name>
 
     <properties>
         <!-- Convenience property to set the GWT version -->
-        <gwtVersion>2.8.0</gwtVersion>
+        <gwtVersion>2.8.1</gwtVersion>
         <gwtStyle>OBF</gwtStyle> <!-- OBF | PRETTY | DETAILED -->
 
         <appModule>uk.ac.ebi.pwp.widgets.gxa.GXA</appModule>

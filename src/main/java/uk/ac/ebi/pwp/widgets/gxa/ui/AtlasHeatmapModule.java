@@ -10,10 +10,13 @@ class AtlasHeatmapModule extends JavaScriptObject {
     protected AtlasHeatmapModule() {
     }
 
-    public static native AtlasHeatmapModule build(String placeHolder, String uniprotID) /*-{
+    public static native AtlasHeatmapModule build(String placeHolder, String geneQuery) /*-{
         $wnd.expressionAtlasHeatmapHighcharts.render({
-            params: 'geneQuery=' + uniprotID,
-            isMultiExperiment: false,
+            atlasUrl: "https://wwwdev.ebi.ac.uk/gxa/",
+            query: {
+                gene: geneQuery
+            },
+            experiment: 'reference',
             target: placeHolder
         });
     }-*/;

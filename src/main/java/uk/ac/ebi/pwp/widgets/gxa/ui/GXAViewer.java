@@ -31,7 +31,7 @@ public class GXAViewer extends Composite {
     private String getQueryString(List<String> ids){
         StringBuilder sb = new StringBuilder("[");
         for (String uniProtID : ids) {
-            sb.append("{\"value\":\"");
+            sb.append("{value:\"");
             sb.append(uniProtID);
             sb.append("\"},");
         }
