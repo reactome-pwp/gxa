@@ -28,35 +28,35 @@ public class GXAViewer extends Composite {
         initWidget(this.container);
     }
 
-    private String getQueryString(List<String> ids){
+    private String getQueryString(List<String> ids) {
         StringBuilder sb = new StringBuilder("[");
         for (String uniProtID : ids) {
             sb.append("{value:\"");
             sb.append(uniProtID);
             sb.append("\"},");
         }
-        if(sb.length()>0){
-            sb.delete(sb.length()-1, sb.length());
+        if (sb.length() > 0) {
+            sb.delete(sb.length() - 1, sb.length());
         }
         sb.append("]");
         return sb.toString();
     }
 
-    private void load(){
-        if(this.gxa==null && this.container.isAttached()){
+    private void load() {
+        if (this.gxa == null && this.container.isAttached()) {
             this.container.clear();
             String placeHolder = this.container.getElement().getId();
-            if(this.uniprotID!=null){
+            if (this.uniprotID != null) {
                 this.gxa = AtlasHeatmapModule.build(placeHolder, uniprotID);
-            }else if(this.reactomeID!=null){
+            } else if (this.reactomeID != null) {
                 this.gxa = AtlasHeatmapModule.build(placeHolder, URL.encode(reactomeID));
-            }else {
+            } else {
                 this.setEmpty();
             }
         }
     }
 
-    public void setEmpty(){
+    public void setEmpty() {
         this.container.clear();
         this.container.add(new HTMLPanel("No expression data available."));
     }
@@ -66,7 +66,7 @@ public class GXAViewer extends Composite {
         this.load();
     }
 
-    public void setUniProtIDs(List<String> uniProtIDs){
+    public void setUniProtIDs(List<String> uniProtIDs) {
         this.uniprotID = this.getQueryString(uniProtIDs);
         this.load();
     }
